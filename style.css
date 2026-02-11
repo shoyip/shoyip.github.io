@@ -1,0 +1,24 @@
+body {
+	font-family: sans-serif;
+}
+
+.main {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 100px 20px;
+	box-sizing: border-box;
+}
+
+.section {
+	padding-top: 1rem;
+}
+
+p, ul {
+	padding-top: .5rem;
+}
+
+.resref {
+	font-size: 0.6rem;
+	list-style: none;
+	padding-left: 0;
+}
