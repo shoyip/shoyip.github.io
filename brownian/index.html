@@ -1,0 +1,748 @@
+<!DOCTYPE html><html lang="en">
+<head>
+	<link rel="stylesheet" href="../reset.css" />
+	<link rel="stylesheet" href="../style.css" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Fiche TP Mécanique Physique - Diffusion</title>
+<!--Generated on Mon Feb 16 16:38:03 2026 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
+<!--Document created on October 2025.-->
+
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<body>
+	<div class="main">
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">Fiche TP Mécanique Physique - Diffusion</h1>
+<div class="ltx_dates">(Février 2026)</div>
+
+<section id="S1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">1 </span>Diffusion - Introduction générale</h2>
+
+<div id="S1.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">Imaginons que l’on dépose des gouttes de colorant dans un verre d’eau transparent (Figure <a href="#S1.F1" title="Figure 1 ‣ 1 Diffusion - Introduction générale ‣ UE UM4MEP10 : pratique expérimentale et numérique" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a>). Nous observons qu’au cours du temps le colorant tend à se répandre dans l’eau jusqu’à produire un mélange homogène. Ce phénomène, appelé <span class="ltx_text ltx_font_bold">diffusion</span>, correspond à la tendance naturelle des particules à se répartir uniformément dans tout le volume disponible.</p>
+</div>
+<figure id="S1.F1" class="ltx_figure"><img src="assets/macro_diffusion.png" id="S1.F1.g1" class="ltx_graphics ltx_centering ltx_img_landscape" width="538" height="205" alt="Refer to caption">
+<figcaption class="ltx_caption ltx_centering"><span class="ltx_tag ltx_tag_figure">Figure 1: </span>Diffusion d’un colorant violet dans l’eau. Au départ, le colorant est concentré en un seul endroit. Petit à petit, il se répand dans l’eau jusqu’à ce que tout le mélange devienne uniforme.</figcaption>
+</figure>
+<figure id="S1.F2" class="ltx_figure"><img src="assets/micro_diffusion.png" id="S1.F2.g1" class="ltx_graphics ltx_centering ltx_img_landscape" width="299" height="194" alt="Refer to caption">
+<figcaption class="ltx_caption ltx_centering"><span class="ltx_tag ltx_tag_figure">Figure 2: </span>Initialement, le soluté (représenté par les particules bleues) est séparé du solvant (représenté par les particules rouges) par une membrane imperméable. Lorsqu’on retire cette membrane, les particules du soluté commencent à se diffuser dans le solvant. Au fil du temps, leur répartition devient de plus en plus uniforme, jusqu’à ce que la concentration devienne homogène dans l’ensemble du volume.</figcaption>
+</figure>
+<div id="S1.p2" class="ltx_para ltx_noindent">
+<p class="ltx_p">L’observation de ce phénomène a conduit Adolf Fick à formuler une loi phénoménologique, par analogie avec l’équation de la chaleur de Fourier. La loi de Fick stipule que les particules se déplacent des zones de concentration élevée vers les zones de concentration plus faible et propose le courant de particules <math id="S1.p2.m1" class="ltx_Math" alttext="\vec{j}" display="inline"><mover accent="true"><mi>j</mi><mo stretchy="false">→</mo></mover></math> est proportionnel au gradient de concentration <math id="S1.p2.m2" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math>. Dans un cas 1D, on écrit:</p>
+<table id="S1.E1" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.E1.m1" class="ltx_Math" alttext="j_{x}=-D\frac{\partial C}{\partial x}" display="block"><mrow><msub><mi>j</mi><mi>x</mi></msub><mo>=</mo><mrow><mo>−</mo><mrow><mi>D</mi><mo>⁢</mo><mfrac><mrow><mo rspace="0em">∂</mo><mi>C</mi></mrow><mrow><mo rspace="0em">∂</mo><mi>x</mi></mrow></mfrac></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">où <math id="S1.p2.m3" class="ltx_Math" alttext="D" display="inline"><mi>D</mi></math> est le coefficient de diffusion. Associé au principe de conservation de la masse (<math id="S1.p2.m4" class="ltx_Math" alttext="\mathrm{div}\vec{j}=-\frac{\partial C}{\partial t}" display="inline"><mrow><mrow><mi>div</mi><mo>⁢</mo><mover accent="true"><mi>j</mi><mo stretchy="false">→</mo></mover></mrow><mo>=</mo><mrow><mo>−</mo><mfrac><mrow><mo rspace="0em">∂</mo><mi>C</mi></mrow><mrow><mo rspace="0em">∂</mo><mi>t</mi></mrow></mfrac></mrow></mrow></math>), on obtient <em class="ltx_emph ltx_font_italic">l’équation de diffusion</em> (ici à 1D)</p>
+<table id="S1.E2" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.E2.m1" class="ltx_Math" alttext="\frac{\partial C}{\partial t}=D\frac{\partial^{2}C}{\partial x^{2}}" display="block"><mrow><mfrac><mrow><mo rspace="0em">∂</mo><mi>C</mi></mrow><mrow><mo rspace="0em">∂</mo><mi>t</mi></mrow></mfrac><mo>=</mo><mrow><mi>D</mi><mo>⁢</mo><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mi>C</mi></mrow><mrow><mo rspace="0em">∂</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2)</span></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S1.p3" class="ltx_para ltx_noindent">
+<p class="ltx_p">Au niveau microscopique, ce comportement correspond à un mouvement erratique d’un grand nombre de particules du soluté dans le solvant (Figure <a href="#S1.F2" title="Figure 2 ‣ 1 Diffusion - Introduction générale ‣ UE UM4MEP10 : pratique expérimentale et numérique" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a>). Les particules du soluté, en entrant en collision avec celles du solvant, se dispersent progressivement. C’est ainsi que la concentration du soluté diminue localement dans les zones initialement concentrées, tout en s’étendant de manière de plus en plus homogène dans l’ensemble du volume disponible.</p>
+</div>
+<div id="S1.p4" class="ltx_para ltx_noindent">
+<p class="ltx_p">L’objectif de cette séance de Travaux Pratiques est d’établir un lien entre l’échelle microscopique et l’échelle macroscopique pour décrire le phénomène de diffusion. A l’échelle microscopique, le extrêmement grand nombre de molécules (<math id="S1.p4.m1" class="ltx_Math" alttext="\sim\mathcal{N}_{A}\approx 6.10^{23}" display="inline"><mrow><mi></mi><mo>∼</mo><msub><mi class="ltx_font_mathcaligraphic">𝒩</mi><mi>A</mi></msub><mo>≈</mo><msup><mn>6.10</mn><mn>23</mn></msup></mrow></math>) empêche d’adopter une description déterministe, newtonienne, pour chacune des molécules. Il est cependant possible de recourir à une description probabiliste de la position des particules, par exemple avec un modèle de <em class="ltx_emph ltx_font_italic">marche aléatoire</em>. Il s’agit de considérer que chaque molécule, indépendante des autres, est un marcheur qui effectue à chaque pas de temps <math id="S1.p4.m2" class="ltx_Math" alttext="\tau" display="inline"><mi>τ</mi></math> un saut de taille typique <math id="S1.p4.m3" class="ltx_Math" alttext="l" display="inline"><mi>l</mi></math> dans une direction aléatoire. On peut montrer que si les sauts sont indépendants les uns des autres, sans mémoire (on appelle ça un <em class="ltx_emph ltx_font_italic">processus Markovien</em>), la variance de la position <math id="S1.p4.m4" class="ltx_Math" alttext="\left&lt;x^{2}\right&gt;" display="inline"><mrow><mo>⟨</mo><msup><mi>x</mi><mn>2</mn></msup><mo>⟩</mo></mrow></math> croit linéairement avec le nombre de pas <math id="S1.p4.m5" class="ltx_Math" alttext="N" display="inline"><mi>N</mi></math> (voir l’annexe <a href="#A1" title="Appendix A Éléments théoriques - Mouvement Brownien ‣ UE UM4MEP10 : pratique expérimentale et numérique" class="ltx_ref"><span class="ltx_text ltx_ref_tag">A</span></a>). En passant à la limite continue en temps (<math id="S1.p4.m6" class="ltx_Math" alttext="N=t/\tau" display="inline"><mrow><mi>N</mi><mo>=</mo><mrow><mi>t</mi><mo>/</mo><mi>τ</mi></mrow></mrow></math>), on
+obtient, à 1D</p>
+<table id="S1.E3" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.E3.m1" class="ltx_Math" alttext="\left&lt;x^{2}\right&gt;=2Dt" display="block"><mrow><mrow><mo>⟨</mo><msup><mi>x</mi><mn>2</mn></msup><mo>⟩</mo></mrow><mo>=</mo><mrow><mn>2</mn><mo>⁢</mo><mi>D</mi><mo>⁢</mo><mi>t</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Avec <math id="S1.p4.m7" class="ltx_Math" alttext="D=l^{2}/\tau" display="inline"><mrow><mi>D</mi><mo>=</mo><mrow><msup><mi>l</mi><mn>2</mn></msup><mo>/</mo><mi>τ</mi></mrow></mrow></math>. Cette loi est mesurable à l’échelle macroscopique, via le profil de concentration. La loi de diffusion apparaît ainsi comme une propriété statistique du
+mouvement brownien.
+<br class="ltx_break"></p>
+</div>
+<div id="S1.p5" class="ltx_para ltx_noindent">
+<p class="ltx_p">Reste à savoir comment ce coefficient de diffusion dépend des propriétés géométriques et thermodynamiques des molécules et du solvant. Albert Einstein a établi une relation de fluctuation-dissipation reliant la diffusion et le frottement visqueux. Intuitivement,
+la diffusion résulte des forces aléatoires exercées par les molécules du solvant, qui déplacent en permanence les particules, et
+la viscosité s’oppose à ce mouvement et tend à ralentir les particules.
+À l’équilibre thermique, Einstein obtient</p>
+<table id="S1.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex1.m1" class="ltx_Math" alttext="D\gamma=kT" display="block"><mrow><mrow><mi>D</mi><mo>⁢</mo><mi>γ</mi></mrow><mo>=</mo><mrow><mi>k</mi><mo>⁢</mo><mi>T</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">où
+<math id="S1.p5.m1" class="ltx_Math" alttext="D" display="inline"><mi>D</mi></math> est le coefficient de diffusion,
+<math id="S1.p5.m2" class="ltx_Math" alttext="\gamma" display="inline"><mi>γ</mi></math> est un coefficient de frottement, proportionnel à la viscosité du solvant. Pour des particules sphériques de rayon <math id="S1.p5.m3" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math>, on trouve <math id="S1.p5.m4" class="ltx_Math" alttext="\gamma=6\pi\eta R" display="inline"><mrow><mi>γ</mi><mo>=</mo><mrow><mn>6</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>η</mi><mo>⁢</mo><mi>R</mi></mrow></mrow></math>, avec <math id="S1.p5.m5" class="ltx_Math" alttext="k_{B}" display="inline"><msub><mi>k</mi><mi>B</mi></msub></math> la constante de Boltzmann et <math id="S1.p5.m6" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math> la température du système. Cette relation s’appelle
+la loi de <em class="ltx_emph ltx_font_italic">Stokes-Einstein</em> :</p>
+<table id="S1.E4" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.E4.m1" class="ltx_Math" alttext="D=\frac{k_{B}T}{6\pi\eta R}" display="block"><mrow><mi>D</mi><mo>=</mo><mfrac><mrow><msub><mi>k</mi><mi>B</mi></msub><mo>⁢</mo><mi>T</mi></mrow><mrow><mn>6</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>η</mi><mo>⁢</mo><mi>R</mi></mrow></mfrac></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4)</span></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S1.p6" class="ltx_para ltx_noindent">
+<p class="ltx_p">La séance de TP est constituée de deux parties. La première partie (section <a href="#S1.SS1" title="1.1 Diffusion – Expérience de Sommerfeld ‣ 1 Diffusion - Introduction générale ‣ UE UM4MEP10 : pratique expérimentale et numérique" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1.1</span></a>), consiste à mesurer le coefficient de diffusion <math id="S1.p6.m1" class="ltx_Math" alttext="D" display="inline"><mi>D</mi></math> à l’échelle macroscopique, en exploitant les variations de l’indice optique du mélange soluté-solvant en fonction de la concentration du soluté. Dans la seconde partie (section <a href="#S1.SS2" title="1.2 Diffusion - Mouvement brownien ‣ 1 Diffusion - Introduction générale ‣ UE UM4MEP10 : pratique expérimentale et numérique" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1.2</span></a>), nous mesurerons les trajectoires de microparticules colloïdales de polystyrène par observation directe au microscope. Nous montrerons que ces particules ont un comportement brownien et nous extrairons les coefficients de diffusion pour différentes tailles de particules. Nous testerons ainsi la validité de la loi de Stokes-Einstein Eq <a href="#S1.E4" title="In 1 Diffusion - Introduction générale ‣ UE UM4MEP10 : pratique expérimentale et numérique" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4</span></a>.
+<br class="ltx_break"></p>
+</div>
+<section id="S1.SSx1" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">Lecture <span class="ltx_text ltx_font_bold">avant</span> le TP</h3>
+
+<div id="S1.SSx1.p1" class="ltx_para ltx_noindent">
+<ol id="S1.I1" class="ltx_enumerate">
+<li id="S1.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S1.I1.i1.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p"><a href="https://sommerfeld-project-b731df.gitlab.io" title="" class="ltx_ref ltx_href">Éléments théoriques : Mouvement Brownien &amp; Expérience de Sommerfeld</a></p>
+</div>
+</li>
+</ol>
+</div>
+</section>
+<section id="S1.SSx2" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">Objectifs du TP</h3>
+
+<div id="S1.SSx2.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">Observer le mouvement brownien de particules microscopiques ; relier le mouvement brownien au phénomène de diffusion ; déterminer un coefficient de diffusion à partir de l’analyse des trajectoires de particules ; vérifier expérimentalement la loi de Stokes–Einstein ; mettre en œuvre l’expérience de Sommerfeld pour déterminer un coefficient de diffusion optiquement.</p>
+</div>
+</section>
+<section id="S1.SSx3" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">Objectifs pédagogiques</h3>
+
+<div id="S1.SSx3.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">Comprendre l’origine microscopique de la diffusion ; comprendre le lien entre diffusion, agitation thermique et mouvement brownien ; se familiariser avec l’acquisition et le traitement d’images expérimentales ; apprendre à extraire et exploiter des trajectoires de particules ; manipuler des outils de programmation scientifique (Python, bibliothèques) ; mettre en œuvre une démarche de modélisation et de simulation numérique ; confronter résultats théoriques, numériques et expérimentaux ; développer l’analyse critique et la présentation scientifique des résultats.</p>
+</div>
+</section>
+<section id="S1.SS1" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">1.1 </span>Diffusion – Expérience de Sommerfeld</h3>
+
+<div id="S1.SS1.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">L’expérience de Sommerfeld illustre le phénomène de diffusion
+moléculaire à l’échelle macroscopique. Une cuve est remplie d’eau,
+puis un mélange eau–glycérol est introduit en dessous, de manière à créer une
+interface quasi plane entre les deux liquides. Le système est ainsi
+stratifié. Lorsque les deux liquides s’interpénètrent, la diffusion
+engendre un gradient vertical de concentration. Comme l’indice de réfraction d’un mélange eau/glycérol dépend de sa concentration, le gradient de concentration induit donc un gradient d’indice de réfraction optique. 
+<br class="ltx_break">En pratique, on détermine ce gradient d’incice en mesurant la déflexion d’un faisceau laser élargi en feuille de lumière, qui traverse la cuve avec un angle d’environ 45° par rapport à l’horizontale (voir figure <a href="#S1.F3" title="Figure 3 ‣ 1.1 Diffusion – Expérience de Sommerfeld ‣ 1 Diffusion - Introduction générale ‣ UE UM4MEP10 : pratique expérimentale et numérique" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3</span></a>). En présence du
+gradient d’indice, les rayons lumineux se courbent vers les les indices optiques les plus grands. La feuille de lumière est ainsi déformée, une creux se produit sur une zone qui correspond à l’étendue du gradient de concentration (Fig. <a href="#S1.F3" title="Figure 3 ‣ 1.1 Diffusion – Expérience de Sommerfeld ‣ 1 Diffusion - Introduction générale ‣ UE UM4MEP10 : pratique expérimentale et numérique" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3</span></a>).
+On peut montrer<cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib3" title="" class="ltx_ref">3</a>]</cite> que l’angle de déviation maximal <math id="S1.SS1.p1.m1" class="ltx_Math" alttext="\alpha_{\max}" display="inline"><msub><mi>α</mi><mi>max</mi></msub></math> est proportionnel à
+l’intensité du gradient et s’écrit :</p>
+<table id="S1.E5" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.E5.m1" class="ltx_Math" alttext="\alpha_{\max}=d\,\frac{n_{g}-n_{w}}{c_{r}}\,\frac{1}{2\sqrt{\pi Dt}}" display="block"><mrow><msub><mi>α</mi><mi>max</mi></msub><mo>=</mo><mrow><mi>d</mi><mo lspace="0.170em">⁢</mo><mfrac><mrow><msub><mi>n</mi><mi>g</mi></msub><mo>−</mo><msub><mi>n</mi><mi>w</mi></msub></mrow><msub><mi>c</mi><mi>r</mi></msub></mfrac><mo lspace="0.170em">⁢</mo><mfrac><mn>1</mn><mrow><mn>2</mn><mo>⁢</mo><msqrt><mrow><mi>π</mi><mo>⁢</mo><mi>D</mi><mo>⁢</mo><mi>t</mi></mrow></msqrt></mrow></mfrac></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5)</span></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S1.SS1.p2" class="ltx_para ltx_noindent">
+<p class="ltx_p"><math id="S1.SS1.p2.m1" class="ltx_Math" alttext="d" display="inline"><mi>d</mi></math> : épaisseur interne de la cuve ; <math id="S1.SS1.p2.m2" class="ltx_Math" alttext="n_{g}" display="inline"><msub><mi>n</mi><mi>g</mi></msub></math>, <math id="S1.SS1.p2.m3" class="ltx_Math" alttext="n_{w}" display="inline"><msub><mi>n</mi><mi>w</mi></msub></math> : indices de réfraction du glycérol pur et de l’eau ; <math id="S1.SS1.p2.m4" class="ltx_Math" alttext="c_{r}" display="inline"><msub><mi>c</mi><mi>r</mi></msub></math> : concentration relative du mélange eau-glycérol ; <math id="S1.SS1.p2.m5" class="ltx_Math" alttext="D" display="inline"><mi>D</mi></math> : coefficient de diffusion du glycérol dans l’eau.</p>
+</div>
+<div id="S1.SS1.p3" class="ltx_para ltx_noindent">
+<p class="ltx_p">L’étude de la variation de <math id="S1.SS1.p3.m1" class="ltx_Math" alttext="\alpha_{\max}" display="inline"><msub><mi>α</mi><mi>max</mi></msub></math> en fonction du temps permet ainsi de déduire une valeur du coefficient de diffusion <math id="S1.SS1.p3.m2" class="ltx_Math" alttext="D" display="inline"><mi>D</mi></math>.</p>
+</div>
+<figure id="S1.F3" class="ltx_figure">
+<div class="ltx_flex_figure">
+<div class="ltx_flex_cell ltx_flex_size_2">
+<div class="ltx_block ltx_figure_panel ltx_minipage ltx_align_center ltx_align_middle" style="width:325.2pt;">
+<img src="Sommerfeld_figures/sommerfeld.png" id="S1.F3.g1" class="ltx_graphics ltx_img_landscape" width="598" height="365" alt="Refer to caption">
+</div>
+</div>
+<div class="ltx_flex_cell ltx_flex_size_2">
+<div class="ltx_block ltx_figure_panel ltx_minipage ltx_align_center ltx_align_middle" style="width:86.7pt;">
+<img src="Sommerfeld_figures/h.png" id="S1.F3.g2" class="ltx_graphics ltx_img_portrait" width="598" height="1090" alt="Refer to caption">
+</div>
+</div>
+</div>
+<figcaption class="ltx_caption ltx_centering"><span class="ltx_tag ltx_tag_figure">Figure 3: </span>Déviation d’une feuille laser lors de l’expérience de Sommerfeld.
+Un faisceau laser, élargi en feuille de lumière à l’aide d’une lentille
+cylindrique, traverse une cuve contenant de l’eau et un mélange
+eau–glycérol sous un angle de <math id="S1.F3.m2" class="ltx_Math" alttext="45^{\circ}" display="inline"><msup><mn>45</mn><mo>∘</mo></msup></math>. Le gradient d’indice de
+réfraction induit par la diffusion courbe la trajectoire du faisceau
+(trace rouge observée sur l’écran). À l’équilibre diffusif, la trajectoire
+redevient rectiligne (ligne pointillée noire) <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib3" title="" class="ltx_ref">3</a>]</cite>.</figcaption>
+</figure>
+<section id="S1.SS1.SSS1" class="ltx_subsubsection">
+<h4 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">1.1.1 </span>Partie expérimentale</h4>
+
+<section id="S1.SS1.SSS1.Px1" class="ltx_paragraph">
+<h5 class="ltx_title ltx_title_paragraph">Matériel et montage optique</h5>
+
+<div id="S1.SS1.SSS1.Px1.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Attention : le remplissage de la cuve doit être effectué uniquement lorsque l’acquisition des images est prête à démarrer.</span></p>
+</div>
+<div id="S1.SS1.SSS1.Px1.p2" class="ltx_para ltx_noindent">
+<p class="ltx_p">Le montage expérimental illustré sur la figure <a href="#S1.F3" title="Figure 3 ‣ 1.1 Diffusion – Expérience de Sommerfeld ‣ 1 Diffusion - Introduction générale ‣ UE UM4MEP10 : pratique expérimentale et numérique" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3</span></a> est organisé de la manière suivante.
+Un laser est d’abord élargi en feuille de lumière grâce à une lentille cylindrique, puis dirigé vers la cuve.
+La distance entre la lentille et l’entrée de la cuve est de 8 cm, ce qui permet de former une feuille laser suffisamment large pour traverser toute la cuve.
+Le faisceau traverse la cuve avec un angle d’environ <math id="S1.SS1.SSS1.Px1.p2.m1" class="ltx_Math" alttext="45^{\circ}" display="inline"><msup><mn>45</mn><mo>∘</mo></msup></math> par rapport à l’horizontale.</p>
+</div>
+<div id="S1.SS1.SSS1.Px1.p3" class="ltx_para ltx_noindent">
+<p class="ltx_p">Après avoir traversé la cuve, le laser atteint l’écran placé à 6 cm de l’entrée de la cuve, où l’on peut observer la déviation du faisceau induite par le gradient d’indice de réfraction.
+Enfin, un appareil photo est positionné à 18 cm de l’écran pour capturer l’image du faisceau.</p>
+</div>
+<div id="S1.SS1.SSS1.Px1.p4" class="ltx_para ltx_noindent">
+<p class="ltx_p">Les distances indiquées constituent une première estimation et peuvent être modifiées pour optimiser le montage. On notera précisémment dans son cahier la distance entre la cuve et l’écran. Avant de commencer les mesures, il est également important de vérifier l’alignement du dispositif : le faisceau doit traverser la cuve correctement à 45° et apparaître sur l’écran de manière nette.</p>
+</div>
+</section>
+<section id="S1.SS1.SSS1.Px2" class="ltx_paragraph">
+<h5 class="ltx_title ltx_title_paragraph">Contrôle de la caméra et acquisition des images</h5>
+
+<div id="S1.SS1.SSS1.Px2.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">Allumez l’appareil photo et connectez-le à l’ordinateur à l’aide du câble USB.
+Lancez le logiciel Sony (<span class="ltx_text ltx_font_italic">Camera Control Pro</span>) et sélectionnez l’appareil photo, l’aperçu de l’image doit apparaître à l’écran.</p>
+</div>
+<div id="S1.SS1.SSS1.Px2.p2" class="ltx_para ltx_noindent">
+<p class="ltx_p">Effectuez la mise au point manuellement à l’aide de la bague de mise au point et vérifiez le cadrage et l’exposition à l’aide de l’aperçu à l’écran.
+Scotchez un morceau de papier millimétré sur l’écran optique et prendre une photo. Cela servira de référence pour le rapport pixels/centimètres. <span class="ltx_text ltx_font_bold">Ne plus changer les réglages ni la position de la caméra.</span></p>
+</div>
+<div id="S1.SS1.SSS1.Px2.p3" class="ltx_para ltx_noindent">
+<p class="ltx_p">Remplissez d’abord la cuve avec 20 mL d’eau distillée. À l’aide d’une pipette, ajoutez ensuite très lentement 20 mL de solution de glycérol à <math id="S1.SS1.SSS1.Px2.p3.m1" class="ltx_Math" alttext="c_{r}" display="inline"><msub><mi>c</mi><mi>r</mi></msub></math>=25% au fond de la cuve afin de limiter au maximum toute convection. Le mélange eau-glycérol, plus dense, doit rester en bas de la cuve, l’eau distillée au-dessus. Retirer très délicatement la pipette.</p>
+</div>
+<div id="S1.SS1.SSS1.Px2.p4" class="ltx_para ltx_noindent">
+<p class="ltx_p">Réglez l’intervalle de prise de vue à toutes les 5 minutes pour 3 heures et lancez l’acquisition automatique. Vérifiez de temps en temps que les images sont correctement prises.</p>
+</div>
+</section>
+</section>
+</section>
+<section id="S1.SS2" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">1.2 </span>Diffusion - Mouvement brownien</h3>
+
+<div id="S1.SS2.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">Dans cette partie expérimentale, nous observerons le mouvement erratique de particules colloïdales de polystyrène dispersées dans l’eau, puis nous suivrons leurs trajectoires pour calculer leur déplacement quadratique moyen (MSD) et en déduire le coefficient de diffusion <math id="S1.SS2.p1.m1" class="ltx_Math" alttext="D" display="inline"><mi>D</mi></math>. Nous répéterons cette procédure pour des particules de rayons différents, afin de vérifier la validité de la loi de Stokes-Einstein (Éq. <a href="#S1.E4" title="In 1 Diffusion - Introduction générale ‣ UE UM4MEP10 : pratique expérimentale et numérique" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4</span></a>).</p>
+</div>
+<section id="S1.SS2.SSS1" class="ltx_subsubsection">
+<h4 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">1.2.1 </span>Préparation du dispositif expérimental</h4>
+
+<div id="S1.SS2.SSS1.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">Pour préparer la solution colloïdale on dispose d’une solution stock dont la fraction volumique de particules est <math id="S1.SS2.SSS1.p1.m1" class="ltx_Math" alttext="\phi_{0}" display="inline"><msub><mi>ϕ</mi><mn>0</mn></msub></math>. Effectuez une dilution à l’aide d’une micropipette pour obtenir un volume <math id="S1.SS2.SSS1.p1.m2" class="ltx_Math" alttext="V_{f}" display="inline"><msub><mi>V</mi><mi>f</mi></msub></math> à une fraction volumique finale de <math id="S1.SS2.SSS1.p1.m3" class="ltx_Math" alttext="\phi_{f}" display="inline"><msub><mi>ϕ</mi><mi>f</mi></msub></math>.
+<br class="ltx_break">Prélever 60 <math id="S1.SS2.SSS1.p1.m4" class="ltx_Math" alttext="\mu" display="inline"><mi>μ</mi></math>L de la solution diluée à l’aide d’une micropipette, et la déposer dans une lame de microscope à cavité. Couvrez la lame avec une lamelle et scellez les bords en utilisant la cire.
+<br class="ltx_break">Positionner la lame de verre sur la platine du microscope inversé, avec la lamelle face à l’objectif. Avec la roue à objectif, choisir successivement des grandissement croissant, de 10x jusqu’à 40x et réglez chaque fois la mise au point et le temps d’exposition. Assurez vous de ne pas observer de dérive (c’est à dire un mouvement directionnel des particules, du à une mauvais étanchéité par exemple).
+<br class="ltx_break">Prenez une séquence temporelle d’image d’une minute, avec des prises d’image
+toutes les <math id="S1.SS2.SSS1.p1.m5" class="ltx_Math" alttext="100\,\mathrm{ms}" display="inline"><mrow><mn>100</mn><mo lspace="0.170em">⁢</mo><mi>ms</mi></mrow></math>. Sauvegardez les images au
+format TIFF et transferez-les sur une clé USB.
+<br class="ltx_break">Répéter ces manipulations pour les trois tailles de particules disponibles.</p>
+</div>
+</section>
+</section>
+<section id="S1.SS3" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">1.3 </span>Diffusion - Analyse des données et simulations</h3>
+
+<section id="S1.SS3.SSS1" class="ltx_subsubsection">
+<h4 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">1.3.1 </span>Analyses des données - Mouvement Brownien</h4>
+
+<div id="S1.SS3.SSS1.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">Pour l’analyse des images on utilisera les librairies
+NumPyn Matplotlib, OpenCV,
+TrackPy et Pandas, respectivement pour le traitement
+d’images, pour obtenir les trajectoires des particules
+et enfin pour traiter/ajuster les données et extraire les coefficients de diffusion.</p>
+</div>
+<section id="S1.SS3.SSS1.Px1" class="ltx_paragraph">
+<h5 class="ltx_title ltx_title_paragraph">Traitement des images</h5>
+
+<div id="S1.SS3.SSS1.Px1.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">Afin de suivre les trajectoires des particules, il faut d’abord
+les trouver. Pour cela, nous utilisons une série de méthodes qui nous permettent de mieux les isoler du fond de l’image.
+<br class="ltx_break">Ouvrir et consulter la documentation relative à OpenCV.
+<br class="ltx_break">À l’aide d’OpenCV, chargez les images, appliquez un filtre gaussien pour optimiser la détection, puis utilisez <span class="ltx_text ltx_font_typewriter">findContours</span> et <span class="ltx_text ltx_font_typewriter">contourArea</span> pour identifier les particules et ne sélectionner que celles dont la taille est adaptée. Calculez leurs centroïdes avec moments, puis enregistrez les coordonnées <math id="S1.SS3.SSS1.Px1.p1.m1" class="ltx_Math" alttext="(x,y)" display="inline"><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></math> et le numéro de chaque image dans un DataFrame pour analyse ultérieure.</p>
+</div>
+</section>
+<section id="S1.SS3.SSS1.Px2" class="ltx_paragraph">
+<h5 class="ltx_title ltx_title_paragraph">Suivi des particules</h5>
+
+<div id="S1.SS3.SSS1.Px2.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">Une fois les centroides de chaque particules obtenus pour
+chaque image, il s’agit désormais de suivre les trajectoires de chaque
+particules. Pour ce faire on utilise un programme de <em class="ltx_emph ltx_font_italic">tracking</em> (“suivi de particules"), c’est à dire une fonction qui associe la position d’une particule donnée
+dans une image à sa position à l’image suivante.
+<br class="ltx_break">Ouvrir et consulter la documentation relative à TrackPy.
+<br class="ltx_break">Utilisez la méthode <span class="ltx_text ltx_font_typewriter">link</span> en ajustant les paramètres <span class="ltx_text ltx_font_typewriter">search_range</span> et <span class="ltx_text ltx_font_typewriter">memory</span> pour relier les particules détectées précédemment. Enfin, visualisez les trajectoires obtenues avec <span class="ltx_text ltx_font_typewriter">plot_traj</span>.</p>
+</div>
+</section>
+<section id="S1.SS3.SSS1.Px3" class="ltx_paragraph">
+<h5 class="ltx_title ltx_title_paragraph">Calcul du MSD</h5>
+
+<div id="S1.SS3.SSS1.Px3.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">Pour mesurer le coefficient de diffusion, nous allons désormais déterminer le déplacement quadratique moyen des particules en fonction du temps. Comme les particules sont supposées indépendantes (à faible concentration) on peut augmenter le rapport signal sur bruit en effectuant une moyenne d’ensemble sur les <math id="S1.SS3.SSS1.Px3.p1.m1" class="ltx_Math" alttext="N_{p}" display="inline"><msub><mi>N</mi><mi>p</mi></msub></math> différents marcheurs</p>
+<table id="S1.E6" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.E6.m1" class="ltx_Math" alttext="\left\langle\vec{x}(t)^{2}\right\rangle=\frac{1}{N_{p}}\sum_{i=1}^{N_{p}}(\vec%
+{x}(t)-\vec{x}(0))^{2}." display="block"><mrow><mrow><mrow><mo>⟨</mo><mrow><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow><mo>⟩</mo></mrow><mo>=</mo><mrow><mfrac><mn>1</mn><msub><mi>N</mi><mi>p</mi></msub></mfrac><mo>⁢</mo><mrow><munderover><mo movablelimits="false" rspace="0em">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><msub><mi>N</mi><mi>p</mi></msub></munderover><msup><mrow><mo stretchy="false">(</mo><mrow><mrow><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>−</mo><mrow><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(6)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Si par ailleurs on fait l’hypothèse que le système est ergodique (moyenne d’ensemble et temporelle sont identiques), on peut calculer
+le déplacement quadratique moyen par rapport à des intervalles de temps <math id="S1.SS3.SSS1.Px3.p1.m2" class="ltx_Math" alttext="\Delta t" display="inline"><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>t</mi></mrow></math>, et non pas un temps absolu. Grace à cela, on augmente considérablement le nombre d’échantillons et obtient des résultats statistiquement plus significatifs.</p>
+<table id="S1.E7" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.E7.m1" class="ltx_Math" alttext="\left\langle\vec{x}(\Delta t)^{2}\right\rangle=\frac{1}{N_{p}}\sum_{i=1}^{N_{p%
+}}\frac{1}{M-k}\sum_{j=1}^{M-k-1}[(x^{0}_{i,j+k}-x^{0}_{i,j})^{2}+(x^{1}_{i,j+%
+k}-x^{1}_{i,j})^{2}]" display="block"><mrow><mrow><mo>⟨</mo><mrow><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>t</mi></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow><mo>⟩</mo></mrow><mo>=</mo><mrow><mfrac><mn>1</mn><msub><mi>N</mi><mi>p</mi></msub></mfrac><mo>⁢</mo><mrow><munderover><mo movablelimits="false">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><msub><mi>N</mi><mi>p</mi></msub></munderover><mrow><mfrac><mn>1</mn><mrow><mi>M</mi><mo>−</mo><mi>k</mi></mrow></mfrac><mo>⁢</mo><mrow><munderover><mo movablelimits="false" rspace="0em">∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mrow><mi>M</mi><mo>−</mo><mi>k</mi><mo>−</mo><mn>1</mn></mrow></munderover><mrow><mo stretchy="false">[</mo><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><msubsup><mi>x</mi><mrow><mi>i</mi><mo>,</mo><mrow><mi>j</mi><mo>+</mo><mi>k</mi></mrow></mrow><mn>0</mn></msubsup><mo>−</mo><msubsup><mi>x</mi><mrow><mi>i</mi><mo>,</mo><mi>j</mi></mrow><mn>0</mn></msubsup></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mo>+</mo><msup><mrow><mo stretchy="false">(</mo><mrow><msubsup><mi>x</mi><mrow><mi>i</mi><mo>,</mo><mrow><mi>j</mi><mo>+</mo><mi>k</mi></mrow></mrow><mn>1</mn></msubsup><mo>−</mo><msubsup><mi>x</mi><mrow><mi>i</mi><mo>,</mo><mi>j</mi></mrow><mn>1</mn></msubsup></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow><mo stretchy="false">]</mo></mrow></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(7)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">dans le cas bidimensionnel.</p>
+</div>
+<div id="S1.SS3.SSS1.Px3.p2" class="ltx_para ltx_noindent">
+<p class="ltx_p">Ecrire un code Python qui extrait <math id="S1.SS3.SSS1.Px3.p2.m1" class="ltx_Math" alttext="\left\langle x(t)^{2}\right\rangle" display="inline"><mrow><mo>⟨</mo><mrow><mi>x</mi><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow><mo>⟩</mo></mrow></math> en utilisant ces deux approches (moyenne sur les particules et/ou sur le temps) et tracez-les en fonction du temps, ou de <math id="S1.SS3.SSS1.Px3.p2.m2" class="ltx_Math" alttext="\Delta t" display="inline"><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>t</mi></mrow></math>, respectivement. Laquelle Vous semble-t-elle la meilleure? 
+<br class="ltx_break">Ajuster linéairement ces données, et calculez <math id="S1.SS3.SSS1.Px3.p2.m3" class="ltx_Math" alttext="D" display="inline"><mi>D</mi></math> pour rayons <math id="S1.SS3.SSS1.Px3.p2.m4" class="ltx_Math" alttext="R=\{0{,}5\,\mu\text{m},0{,}75\,\mu\text{m},1{,}0\,\mu\text{m}\}" display="inline"><mrow><mi>R</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mn>0</mn><mo>,</mo><mrow><mn>5</mn><mo lspace="0.170em">⁢</mo><mi>μ</mi><mo>⁢</mo><mtext>m</mtext></mrow><mo>,</mo><mn>0</mn><mo>,</mo><mrow><mn>75</mn><mo lspace="0.170em">⁢</mo><mi>μ</mi><mo>⁢</mo><mtext>m</mtext></mrow><mo>,</mo><mn>1</mn><mo>,</mo><mrow><mn>0</mn><mo lspace="0.170em">⁢</mo><mi>μ</mi><mo>⁢</mo><mtext>m</mtext></mrow><mo stretchy="false">}</mo></mrow></mrow></math>. Est la loi
+de Stokes-Einstein vérifiée?</p>
+</div>
+</section>
+</section>
+<section id="S1.SS3.SSS2" class="ltx_subsubsection">
+<h4 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">1.3.2 </span>Simulation du Mouvement Brownien</h4>
+
+<div id="S1.SS3.SSS2.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">Dans cette partie, nous allons simuler des marcheurs aléatoires en deux dimensions afin de tester le modèle de mouvement brownien. Pour cela, nous générons des déplacements en <math id="S1.SS3.SSS2.p1.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> et en <math id="S1.SS3.SSS2.p1.m2" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> en tirant aléatoirement ces valeurs dans une distribution gaussienne. Nous vérifierons que ces trajectoires possèdent bien les propriétés caractéristiques des particules browniennes, notamment leur comportement diffusif.</p>
+</div>
+<section id="S1.SS3.SSS2.Px1" class="ltx_paragraph">
+<h5 class="ltx_title ltx_title_paragraph">Plusieurs marcheurs aléatoires en 2D</h5>
+
+<div id="S1.SS3.SSS2.Px1.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">Vous pouvez utiliser l’option <span class="ltx_text ltx_font_typewriter">size</span> de la méthode NumPy
+<span class="ltx_text ltx_font_typewriter">np.random.normal</span> pour créer plusieurs marcheurs aléatoires.
+Générer les déplacements (à 2D) et déterminer les positions pour
+10 marcheurs. Utiliser une fonction Matplotlib pour visualiser les
+trajectoires des marcheurs en 2D en différents couleurs</p>
+</div>
+</section>
+</section>
+<section id="S1.SS3.SSS3" class="ltx_subsubsection">
+<h4 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">1.3.3 </span>Écart quadratique moyen en fonction du temps</h4>
+
+<div id="S1.SS3.SSS3.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">Calculer le déplacement quadratique moyen selon les deux méthodes présentées plus haut. Simulez 100 marcheurs aléatoires avec 600 pas chacun. Calculez l’écart quadratique moyen (MSD) à partir des trajectoires simulées en utilisant d’abord l’équation <a href="#S1.E6" title="In Calcul du MSD ‣ 1.3.1 Analyses des données - Mouvement Brownien ‣ 1.3 Diffusion - Analyse des données et simulations ‣ 1 Diffusion - Introduction générale ‣ UE UM4MEP10 : pratique expérimentale et numérique" class="ltx_ref"><span class="ltx_text ltx_ref_tag">6</span></a>, puis l’équation <a href="#S1.E7" title="In Calcul du MSD ‣ 1.3.1 Analyses des données - Mouvement Brownien ‣ 1.3 Diffusion - Analyse des données et simulations ‣ 1 Diffusion - Introduction générale ‣ UE UM4MEP10 : pratique expérimentale et numérique" class="ltx_ref"><span class="ltx_text ltx_ref_tag">7</span></a>, et comparez les résultats. Enfin, effectuez une régression linéaire sur la première moitié des pas pour les deux méthodes et évaluez la qualité de l’ajustement avec le coefficient <math id="S1.SS3.SSS3.p1.m1" class="ltx_Math" alttext="R^{2}" display="inline"><msup><mi>R</mi><mn>2</mn></msup></math>.</p>
+</div>
+<section id="S1.SS3.SSS3.Px1" class="ltx_paragraph">
+<h5 class="ltx_title ltx_title_paragraph">Loi de Stokes-Einstein</h5>
+
+<div id="S1.SS3.SSS3.Px1.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">On peut calculer avec cette formule le coefficient de diffusion <math id="S1.SS3.SSS3.Px1.p1.m1" class="ltx_Math" alttext="D" display="inline"><mi>D</mi></math>
+auquel on peut s’attendre dans l’eau (coefficient de viscosité
+<math id="S1.SS3.SSS3.Px1.p1.m2" class="ltx_Math" alttext="\eta=1\times 10^{-3}\,\mathrm{Pa\,s}" display="inline"><mrow><mi>η</mi><mo>=</mo><mrow><mrow><mn>1</mn><mo lspace="0.222em" rspace="0.222em">×</mo><msup><mn>10</mn><mrow><mo>−</mo><mn>3</mn></mrow></msup></mrow><mo>⁢</mo><mi>Pa</mi><mo lspace="0.170em">⁢</mo><mi mathvariant="normal">s</mi></mrow></mrow></math>) à température ambiante
+(<math id="S1.SS3.SSS3.Px1.p1.m3" class="ltx_Math" alttext="T=25^{\circ}\mathrm{C}" display="inline"><mrow><mi>T</mi><mo>=</mo><mrow><msup><mn>25</mn><mo>∘</mo></msup><mo>⁢</mo><mi mathvariant="normal">C</mi></mrow></mrow></math>) pour des particules avec un certain
+rayon <math id="S1.SS3.SSS3.Px1.p1.m4" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math>.
+Trouvez les coefficients de diffusion pour des particules
+de rayon <math id="S1.SS3.SSS3.Px1.p1.m5" class="ltx_Math" alttext="0{,}23\,\mu\text{m}" display="inline"><mrow><mn>0</mn><mo>,</mo><mrow><mn>23</mn><mo lspace="0.170em">⁢</mo><mi>μ</mi><mo>⁢</mo><mtext>m</mtext></mrow></mrow></math>, <math id="S1.SS3.SSS3.Px1.p1.m6" class="ltx_Math" alttext="0{,}39\,\mu\text{m}" display="inline"><mrow><mn>0</mn><mo>,</mo><mrow><mn>39</mn><mo lspace="0.170em">⁢</mo><mi>μ</mi><mo>⁢</mo><mtext>m</mtext></mrow></mrow></math>,
+<math id="S1.SS3.SSS3.Px1.p1.m7" class="ltx_Math" alttext="0{,}49\,\mu\text{m}" display="inline"><mrow><mn>0</mn><mo>,</mo><mrow><mn>49</mn><mo lspace="0.170em">⁢</mo><mi>μ</mi><mo>⁢</mo><mtext>m</mtext></mrow></mrow></math>, <math id="S1.SS3.SSS3.Px1.p1.m8" class="ltx_Math" alttext="1{,}0\,\mu\text{m}" display="inline"><mrow><mn>1</mn><mo>,</mo><mrow><mn>0</mn><mo lspace="0.170em">⁢</mo><mi>μ</mi><mo>⁢</mo><mtext>m</mtext></mrow></mrow></math>,
+<math id="S1.SS3.SSS3.Px1.p1.m9" class="ltx_Math" alttext="1{,}49\,\mu\text{m}" display="inline"><mrow><mn>1</mn><mo>,</mo><mrow><mn>49</mn><mo lspace="0.170em">⁢</mo><mi>μ</mi><mo>⁢</mo><mtext>m</mtext></mrow></mrow></math>.
+Utilisez les valeurs de <math id="S1.SS3.SSS3.Px1.p1.m10" class="ltx_Math" alttext="D" display="inline"><mi>D</mi></math> que vous avez trouvées pour
+redimensionner les marches aléatoires. Prenez des intervalles
+de temps de <math id="S1.SS3.SSS3.Px1.p1.m11" class="ltx_Math" alttext="100\,\mathrm{ms}" display="inline"><mrow><mn>100</mn><mo lspace="0.170em">⁢</mo><mi>ms</mi></mrow></math>.</p>
+</div>
+</section>
+</section>
+<section id="S1.SS3.SSS4" class="ltx_subsubsection">
+<h4 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">1.3.4 </span>Analyses de données - Sommerfeld</h4>
+
+<section id="S1.SS3.SSS4.Px1" class="ltx_paragraph">
+<h5 class="ltx_title ltx_title_paragraph">Traitement des images sous Fiji</h5>
+
+<div id="S1.SS3.SSS4.Px1.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">Fiji est un logiciel de traitement d’images, largement utilisé en sciences expérimentales. Il permet de mesurer, analyser et visualiser des données à partir d’images numériques.</p>
+</div>
+<div id="S1.SS3.SSS4.Px1.p2" class="ltx_para ltx_noindent">
+<ul id="S1.I2" class="ltx_itemize">
+<li id="S1.I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S1.I2.i1.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">Ouvrir Fiji et charger l’image de calibration contenant la règle visible sur l’écran d’observation (<span class="ltx_text ltx_font_italic">File <math id="S1.I2.i1.p1.m1" class="ltx_Math" alttext="\rightarrow" display="inline"><mo stretchy="false">→</mo></math> Open</span>).</p>
+</div>
+</li>
+<li id="S1.I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S1.I2.i2.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">À l’aide de l’outil <span class="ltx_text ltx_font_bold">ligne droite</span>, tracer un segment correspondant à une longueur connue de la règle, puis sélectionner <span class="ltx_text ltx_font_italic">Analyze <math id="S1.I2.i2.p1.m1" class="ltx_Math" alttext="\rightarrow" display="inline"><mo stretchy="false">→</mo></math> Measure</span> afin d’obtenir la longueur correspondante en pixels.</p>
+</div>
+</li>
+<li id="S1.I2.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S1.I2.i3.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">Définir le rapport pixel-mètre en utilisant la commande <span class="ltx_text ltx_font_italic">Analyze <math id="S1.I2.i3.p1.m1" class="ltx_Math" alttext="\rightarrow" display="inline"><mo stretchy="false">→</mo></math> Set Scale…</span>, en renseignant la distance mesurée en pixels, la distance réelle correspondante (en m) et l’unité associée. Notez le rapport.</p>
+</div>
+</li>
+<li id="S1.I2.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S1.I2.i4.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">Charger ensuite la séquence des 30 images expérimentales (<span class="ltx_text ltx_font_italic">File <math id="S1.I2.i4.p1.m1" class="ltx_Math" alttext="\rightarrow" display="inline"><mo stretchy="false">→</mo></math> Import <math id="S1.I2.i4.p1.m2" class="ltx_Math" alttext="\rightarrow" display="inline"><mo stretchy="false">→</mo></math> Image Sequence</span>). Sélectionner une <span class="ltx_text ltx_font_bold">région d’intérêt</span> grâce à l’outil rectangle correspondant à la zone où apparaît le laser, puis appliquer cette sélection à l’ensemble de la pile à l’aide de <span class="ltx_text ltx_font_italic">Image <math id="S1.I2.i4.p1.m3" class="ltx_Math" alttext="\rightarrow" display="inline"><mo stretchy="false">→</mo></math> Crop</span>.</p>
+</div>
+</li>
+<li id="S1.I2.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S1.I2.i5.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">Convertir la pile d’images en niveaux de gris (<span class="ltx_text ltx_font_italic">Image <math id="S1.I2.i5.p1.m1" class="ltx_Math" alttext="\rightarrow" display="inline"><mo stretchy="false">→</mo></math> Type <math id="S1.I2.i5.p1.m2" class="ltx_Math" alttext="\rightarrow" display="inline"><mo stretchy="false">→</mo></math> 8-bit</span>).</p>
+</div>
+</li>
+<li id="S1.I2.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S1.I2.i6.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">Un <span class="ltx_text ltx_font_bold">filtre médian</span> est appliqué à l’ensemble de la pile afin de supprimer les pixels aberrants tout en conservant les contours de la feuille laser. Le filtre est appliqué via <span class="ltx_text ltx_font_italic">Process <math id="S1.I2.i6.p1.m1" class="ltx_Math" alttext="\rightarrow" display="inline"><mo stretchy="false">→</mo></math> Filters <math id="S1.I2.i6.p1.m2" class="ltx_Math" alttext="\rightarrow" display="inline"><mo stretchy="false">→</mo></math> Median…</span>, avec un rayon typique de 1 à 2 pixels et l’option <span class="ltx_text ltx_font_italic">Process Stack</span> activée.</p>
+</div>
+</li>
+<li id="S1.I2.i7" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S1.I2.i7.p1" class="ltx_para">
+<p class="ltx_p">Un flou gaussien est appliqué à l’ensemble de la pile afin de réduire le bruit de fond. Le filtre est appliqué via le menu <span class="ltx_text ltx_font_typewriter">Process <math id="S1.I2.i7.p1.m1" class="ltx_Math" alttext="\rightarrow" display="inline"><mo stretchy="false">→</mo></math> Filters <math id="S1.I2.i7.p1.m2" class="ltx_Math" alttext="\rightarrow" display="inline"><mo stretchy="false">→</mo></math> Gaussian Blur</span>, avec une largeur typique <math id="S1.I2.i7.p1.m3" class="ltx_Math" alttext="\sigma=1" display="inline"><mrow><mi>σ</mi><mo>=</mo><mn>1</mn></mrow></math> pixels et l’option <span class="ltx_text ltx_font_italic">Process Stack</span> activée.</p>
+</div>
+</li>
+<li id="S1.I2.i8" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S1.I2.i8.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">Afin de corriger les variations d’illumination et supprimer le fond lentement variable, on applique ensuite une soustraction de fond (<span class="ltx_text ltx_font_italic">rolling ball</span>) via <span class="ltx_text ltx_font_typewriter">Process <math id="S1.I2.i8.p1.m1" class="ltx_Math" alttext="\rightarrow" display="inline"><mo stretchy="false">→</mo></math> Subtract Background…</span>. Un rayon typique est choisi de l’ordre de la taille des structures à éliminer (par exemple <math id="S1.I2.i8.p1.m2" class="ltx_Math" alttext="50" display="inline"><mn>50</mn></math> à <math id="S1.I2.i8.p1.m3" class="ltx_Math" alttext="150" display="inline"><mn>150</mn></math> pixels selon l’image), avec l’option <span class="ltx_text ltx_font_italic">Process Stack</span> activée.</p>
+</div>
+</li>
+<li id="S1.I2.i9" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S1.I2.i9.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">Le contraste local des images est ensuite amélioré à l’aide de la méthode CLAHE (<span class="ltx_text ltx_font_italic">Contrast Limited Adaptive Histogram Equalization</span>).</p>
+</div>
+</li>
+<li id="S1.I2.i10" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S1.I2.i10.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">Appliquer un <span class="ltx_text ltx_font_bold">seuillage (threshold)</span> afin de segmenter la feuille laser par rapport au fond. Ouvrir <span class="ltx_text ltx_font_italic">Image <math id="S1.I2.i10.p1.m1" class="ltx_Math" alttext="\rightarrow" display="inline"><mo stretchy="false">→</mo></math> Adjust <math id="S1.I2.i10.p1.m2" class="ltx_Math" alttext="\rightarrow" display="inline"><mo stretchy="false">→</mo></math> Threshold…</span>, ajuster les curseurs si nécessaire, puis cliquer sur <span class="ltx_text ltx_font_italic">Apply</span>. Vérifier que la feuille laser apparaît en blanc sur fond noir.</p>
+</div>
+</li>
+<li id="S1.I2.i11" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S1.I2.i11.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">Appliquer une <span class="ltx_text ltx_font_bold">squelettisation</span> de l’image binaire afin de réduire la feuille laser à une ligne d’un pixel d’épaisseur, via <span class="ltx_text ltx_font_italic">Process <math id="S1.I2.i11.p1.m1" class="ltx_Math" alttext="\rightarrow" display="inline"><mo stretchy="false">→</mo></math> Binary <math id="S1.I2.i11.p1.m2" class="ltx_Math" alttext="\rightarrow" display="inline"><mo stretchy="false">→</mo></math> Skeletonize</span>.</p>
+</div>
+</li>
+<li id="S1.I2.i12" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S1.I2.i12.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">Extraire les <span class="ltx_text ltx_font_bold">coordonnées des pixels du squelette pour l’ensemble du stack</span>. Les commandes <span class="ltx_text ltx_font_italic">Create Selection</span> et <span class="ltx_text ltx_font_italic">Save XY Coordinates</span> ne s’appliquant qu’à une image à la fois, on utilise une macro Fiji qui parcourt automatiquement les 30 slices et exporte, pour chaque image, les coordonnées des pixels blancs dans un fichier <span class="ltx_text ltx_font_typewriter">CSV</span> au format <span class="ltx_text ltx_font_typewriter">slice,x,y</span>. La macro est créée via <span class="ltx_text ltx_font_italic">Plugins <math id="S1.I2.i12.p1.m1" class="ltx_Math" alttext="\rightarrow" display="inline"><mo stretchy="false">→</mo></math> New <math id="S1.I2.i12.p1.m2" class="ltx_Math" alttext="\rightarrow" display="inline"><mo stretchy="false">→</mo></math> Macro</span>, puis exécutée :</p>
+</div>
+<div id="S1.I2.i12.p2" class="ltx_para ltx_noindent">
+<pre class="ltx_verbatim ltx_font_typewriter">
+dir = getDirectory("Dossier de sortie");
+out = dir + "skeleton_pixels.csv";
+File.saveString("slice,x,y\n", out);
+
+n = nSlices(); w = getWidth(); h = getHeight();
+setBatchMode(true);
+
+for (s=1; s&lt;=n; s++) {
+  setSlice(s);
+  for (y=0; y&lt;h; y++) for (x=0; x&lt;w; x++)
+    if (getPixel(x,y)&gt;0) File.append(s+","+x+","+y+"\n", out);
+}
+
+setBatchMode(false);
+print("OK: " + out);
+</pre>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="S1.SS3.SSS4.Px2" class="ltx_paragraph">
+<h5 class="ltx_title ltx_title_paragraph">Analyse des images sur Jupyter</h5>
+
+<div id="S1.SS3.SSS4.Px2.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">L’analyse des images est réalisée à l’aide d’un notebook Jupyter accessible en ligne via Binder, dans lequel est implémenté un traitement automatisé de la série d’images acquises :
+<a href="https://mybinder.org/v2/gl/tp7154806%2Ftp_diffusion_sommerfeld/main?urlpath=lab/tree/Sommerfeld_3.ipynb" title="" class="ltx_ref ltx_href">Ouvrir le notebook Jupyter</a></p>
+</div>
+<div id="S1.SS3.SSS4.Px2.p2" class="ltx_para ltx_noindent">
+<p class="ltx_p">Pour chaque image, on mesure la profondeur maximale <math id="S1.SS3.SSS4.Px2.p2.m1" class="ltx_Math" alttext="h" display="inline"><mi>h</mi></math> du creux de la feuille laser (voir Fig. <a href="#S1.F3" title="Figure 3 ‣ 1.1 Diffusion – Expérience de Sommerfeld ‣ 1 Diffusion - Introduction générale ‣ UE UM4MEP10 : pratique expérimentale et numérique" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3</span></a>. Les valeurs de <math id="S1.SS3.SSS4.Px2.p2.m2" class="ltx_Math" alttext="h" display="inline"><mi>h</mi></math> en fonction du temps seront ensuite regroupées afin d’étudier leur évolution temporelle.
+<br class="ltx_break"></p>
+<ul id="S1.I3" class="ltx_itemize">
+<li id="S1.I3.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S1.I3.i1.p1" class="ltx_para">
+<p class="ltx_p">Tracer <math id="S1.I3.i1.p1.m1" class="ltx_Math" alttext="\alpha" display="inline"><mi>α</mi></math> en fonction du temps, en échelle log-log. Le comportement est-il diffusif comme attendu ?</p>
+</div>
+</li>
+<li id="S1.I3.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S1.I3.i2.p1" class="ltx_para">
+<p class="ltx_p">Ajuster ces données, pour déterminer le coefficient de diffusion <math id="S1.I3.i2.p1.m1" class="ltx_Math" alttext="D" display="inline"><mi>D</mi></math> en s’appuyant sur l’équation <a href="#S1.E5" title="In 1.1 Diffusion – Expérience de Sommerfeld ‣ 1 Diffusion - Introduction générale ‣ UE UM4MEP10 : pratique expérimentale et numérique" class="ltx_ref"><span class="ltx_text ltx_ref_tag">5</span></a> liant <math id="S1.I3.i2.p1.m2" class="ltx_Math" alttext="\alpha_{\max}" display="inline"><msub><mi>α</mi><mi>max</mi></msub></math> au temps.</p>
+</div>
+</li>
+<li id="S1.I3.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S1.I3.i3.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">Si on admet que la relation de Stokes-Einstein est vérifiée pour les molécules de glycérol, quelle est la taille typique de la molécule ? Commenter votre résultat.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+</section>
+</section>
+</section>
+<section id="bib" class="ltx_bibliography">
+<h2 class="ltx_title ltx_title_bibliography">References</h2>
+
+<ul class="ltx_biblist">
+      
+<li id="bib.bib1" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[1]</span>
+<span class="ltx_bibblock">
+J. Jai, E. Wunenburger, J. Boisgard,
+<span class="ltx_text ltx_font_italic">Sur les traces de Jean Perrin</span>,
+Le BUP – UdPPC, Vol. 102, juin 2008, p. 817.
+
+</span>
+</li>
+      
+<li id="bib.bib2" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[2]</span>
+<span class="ltx_bibblock">
+H. C. Berg,
+<span class="ltx_text ltx_font_italic">Random Walks in Biology</span>,
+Princeton University Press (2025).
+
+</span>
+</li>
+      
+<li id="bib.bib3" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[3]</span>
+<span class="ltx_bibblock">
+J.-M. Roussel, M. Gailhanou, A. Larrivé, L. Montero, M. Zaffran, C. Torregrosa,
+<span class="ltx_text ltx_font_italic">On the Wiener optical method to study molecular diffusion in liquids</span>,
+Am. J. Phys. <span class="ltx_text ltx_font_bold">88</span>(8), 661–669 (2020).
+
+</span>
+</li>
+      
+<li id="bib.bib4" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[4]</span>
+<span class="ltx_bibblock">
+A. Sommerfeld,
+<span class="ltx_text ltx_font_italic">Optics</span>,
+Lectures on Theoretical Physics, Vol. IV,
+Academic Press, Cambridge (1954).
+
+</span>
+</li>
+    
+</ul>
+</section>
+<section id="A1" class="ltx_appendix">
+<h2 class="ltx_title ltx_title_appendix">
+<span class="ltx_tag ltx_tag_appendix">Appendix A </span>Éléments théoriques - Mouvement Brownien</h2>
+
+<div id="A1.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">Pour mieux comprendre le lien entre échelle microscopique et
+macroscopique prenons l’exemple d’un marcheur aléatoire
+à 1D pour retrouver l’équation de diffusion.</p>
+</div>
+<figure id="A1.F4" class="ltx_figure"><img src="assets/micro_steps.png" id="A1.F4.g1" class="ltx_graphics ltx_centering ltx_img_landscape" width="299" height="101" alt="Refer to caption">
+<figcaption class="ltx_caption ltx_centering"><span class="ltx_tag ltx_tag_figure">Figure 4: </span>Marcheur aléatoire sur grille en 1D.</figcaption>
+</figure>
+<div id="A1.p2" class="ltx_para ltx_noindent">
+<p class="ltx_p">On considère une marche aléatoire à une dimension.
+Le marcheur part de la position <math id="A1.p2.m1" class="ltx_Math" alttext="x=0" display="inline"><mrow><mi>x</mi><mo>=</mo><mn>0</mn></mrow></math>, et à chaque pas <math id="A1.p2.m2" class="ltx_Math" alttext="i" display="inline"><mi>i</mi></math> il fait un saut à gauche ou à droite d’une distance <math id="A1.p2.m3" class="ltx_Math" alttext="\ell" display="inline"><mi mathvariant="normal">ℓ</mi></math>
+avec probabilité <math id="A1.p2.m4" class="ltx_Math" alttext="1/2" display="inline"><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></math>. Le déplacement <math id="A1.p2.m5" class="ltx_Math" alttext="\delta x_{i}" display="inline"><mrow><mi>δ</mi><mo>⁢</mo><msub><mi>x</mi><mi>i</mi></msub></mrow></math>
+s’écrit donc:</p>
+<table id="A1.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="A1.Ex2.m1" class="ltx_Math" alttext="\delta x_{i}=\begin{cases}+\ell,&amp;p_{+}=\tfrac{1}{2}\\
+-\ell,&amp;p_{-}=\tfrac{1}{2}\end{cases}" display="block"><mrow><mrow><mi>δ</mi><mo>⁢</mo><msub><mi>x</mi><mi>i</mi></msub></mrow><mo>=</mo><mrow><mo>{</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd class="ltx_align_left" columnalign="left"><mrow><mrow><mo>+</mo><mi mathvariant="normal">ℓ</mi></mrow><mo>,</mo></mrow></mtd><mtd class="ltx_align_left" columnalign="left"><mrow><msub><mi>p</mi><mo>+</mo></msub><mo>=</mo><mstyle displaystyle="false"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle></mrow></mtd></mtr><mtr><mtd class="ltx_align_left" columnalign="left"><mrow><mrow><mo>−</mo><mi mathvariant="normal">ℓ</mi></mrow><mo>,</mo></mrow></mtd><mtd class="ltx_align_left" columnalign="left"><mrow><msub><mi>p</mi><mo>−</mo></msub><mo>=</mo><mstyle displaystyle="false"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle></mrow></mtd></mtr></mtable></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Par construction, la moyenne des déplacements est <math id="A1.p2.m6" class="ltx_Math" alttext="\left\langle\delta x_{i}\right\rangle=0" display="inline"><mrow><mrow><mo>⟨</mo><mrow><mi>δ</mi><mo>⁢</mo><msub><mi>x</mi><mi>i</mi></msub></mrow><mo>⟩</mo></mrow><mo>=</mo><mn>0</mn></mrow></math> et la variance est <math id="A1.p2.m7" class="ltx_Math" alttext="\left\langle\delta x_{i}^{2}\right\rangle=\ell^{2}" display="inline"><mrow><mrow><mo>⟨</mo><mrow><mi>δ</mi><mo>⁢</mo><msubsup><mi>x</mi><mi>i</mi><mn>2</mn></msubsup></mrow><mo>⟩</mo></mrow><mo>=</mo><msup><mi mathvariant="normal">ℓ</mi><mn>2</mn></msup></mrow></math>.
+<br class="ltx_break">La position absolue du marcheur après <math id="A1.p2.m8" class="ltx_Math" alttext="N" display="inline"><mi>N</mi></math> pas s’exprime comme la somme de tous les déplacements successifs:</p>
+<table id="A1.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="A1.Ex3.m1" class="ltx_Math" alttext="x_{N}=\sum_{i=0}^{N}\delta x_{i}." display="block"><mrow><mrow><msub><mi>x</mi><mi>N</mi></msub><mo rspace="0.111em">=</mo><mrow><munderover><mo movablelimits="false">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>0</mn></mrow><mi>N</mi></munderover><mrow><mi>δ</mi><mo>⁢</mo><msub><mi>x</mi><mi>i</mi></msub></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">On obtient donc immédiatement pour la position moyenne :</p>
+<table id="A1.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="A1.Ex4.m1" class="ltx_Math" alttext="\left\langle x_{N}\right\rangle=\sum_{i}\left\langle\delta x_{i}\right\rangle=0" display="block"><mrow><mrow><mo>⟨</mo><msub><mi>x</mi><mi>N</mi></msub><mo>⟩</mo></mrow><mo rspace="0.111em">=</mo><mrow><munder><mo movablelimits="false" rspace="0em">∑</mo><mi>i</mi></munder><mrow><mo>⟨</mo><mrow><mi>δ</mi><mo>⁢</mo><msub><mi>x</mi><mi>i</mi></msub></mrow><mo>⟩</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">D’autre part, les déplacements étant indépendants,
+la variance de leur somme est égale à la somme de leur variance. Il vient :</p>
+<table id="A1.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="A1.Ex5.m1" class="ltx_Math" alttext="\left\langle x_{N}^{2}\right\rangle=\sum_{i}\left\langle\delta x_{i}^{2}\right%
+\rangle=N\ell^{2}." display="block"><mrow><mrow><mrow><mo>⟨</mo><msubsup><mi>x</mi><mi>N</mi><mn>2</mn></msubsup><mo>⟩</mo></mrow><mo rspace="0.111em">=</mo><mrow><munder><mo movablelimits="false" rspace="0em">∑</mo><mi>i</mi></munder><mrow><mo>⟨</mo><mrow><mi>δ</mi><mo>⁢</mo><msubsup><mi>x</mi><mi>i</mi><mn>2</mn></msubsup></mrow><mo>⟩</mo></mrow></mrow><mo>=</mo><mrow><mi>N</mi><mo>⁢</mo><msup><mi mathvariant="normal">ℓ</mi><mn>2</mn></msup></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">En prenant le passage à la limite continue en temps <math id="A1.p2.m9" class="ltx_Math" alttext="N=t/\tau" display="inline"><mrow><mi>N</mi><mo>=</mo><mrow><mi>t</mi><mo>/</mo><mi>τ</mi></mrow></mrow></math>, avec <math id="A1.p2.m10" class="ltx_Math" alttext="\tau" display="inline"><mi>τ</mi></math> le temps typique entre deux collisions, il vient :</p>
+<table id="A1.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="A1.Ex6.m1" class="ltx_Math" alttext="\left\langle x(t)^{2}\right\rangle=\ell^{2}t/\tau=2Dt" display="block"><mrow><mrow><mo>⟨</mo><mrow><mi>x</mi><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow><mo>⟩</mo></mrow><mo>=</mo><mrow><mrow><msup><mi mathvariant="normal">ℓ</mi><mn>2</mn></msup><mo>⁢</mo><mi>t</mi></mrow><mo>/</mo><mi>τ</mi></mrow><mo>=</mo><mrow><mn>2</mn><mo>⁢</mo><mi>D</mi><mo>⁢</mo><mi>t</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">où on a défini <math id="A1.p2.m11" class="ltx_Math" alttext="D=\ell^{2}/2\tau" display="inline"><mrow><mi>D</mi><mo>=</mo><mrow><mrow><msup><mi mathvariant="normal">ℓ</mi><mn>2</mn></msup><mo>/</mo><mn>2</mn></mrow><mo>⁢</mo><mi>τ</mi></mrow></mrow></math>. Ce modèle simple fournit ainsi une définition microscopique du coefficient de diffusion. Mais le processus est-il véritablement diffusif ? Pour s’en convaincre, il faut déterminer la loi d’évolution de la concentration de marcheur. Or la concentration de marcheur est proportionnelle à la probabilité de trouver un marcheur en dans une région de l’espace après <math id="A1.p2.m12" class="ltx_Math" alttext="N" display="inline"><mi>N</mi></math> pas. 
+<br class="ltx_break">La probabilité que le marcheur se trouve à une
+certaine position après <math id="A1.p2.m13" class="ltx_Math" alttext="N" display="inline"><mi>N</mi></math> pas s’écrit</p>
+<table id="A1.E8" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="A1.E8.m1" class="ltx_Math" alttext="P_{N+1}(x)=\frac{1}{2}P_{N}(x-\ell)+\frac{1}{2}P_{N}(x+\ell)" display="block"><mrow><mrow><msub><mi>P</mi><mrow><mi>N</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><msub><mi>P</mi><mi>N</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>−</mo><mi mathvariant="normal">ℓ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><msub><mi>P</mi><mi>N</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>+</mo><mi mathvariant="normal">ℓ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(8)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">En passant à la limite continue</p>
+<table id="A1.E9" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="A1.E9.m1" class="ltx_Math" alttext="P_{N}(x)\to P(x,t)\qquad\mathrm{avec}t=N\tau" display="block"><mrow><mrow><mrow><msub><mi>P</mi><mi>N</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">→</mo><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mspace width="2em"></mspace><mrow><mrow><mi>avec</mi><mo>⁢</mo><mi>t</mi></mrow><mo>=</mo><mrow><mi>N</mi><mo>⁢</mo><mi>τ</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(9)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">en utilisant un développement de Taylor pour la position et le temps, on obtient</p>
+<table id="A1.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="A1.E10"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="A1.E10.m1" class="ltx_Math" alttext="\displaystyle P(x\pm\ell,t)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>±</mo><mi mathvariant="normal">ℓ</mi></mrow><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="A1.E10.m2" class="ltx_Math" alttext="\displaystyle=P(x,t)\pm\ell\frac{\partial P(x,t)}{\partial x}+\frac{1}{2}\ell^%
+{2}\frac{\partial^{2}P(x,t)}{\partial x^{2}}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>±</mo><mrow><mi mathvariant="normal">ℓ</mi><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mo rspace="0em">∂</mo><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mrow><mo rspace="0em">∂</mo><mi>x</mi></mrow></mfrac></mstyle></mrow></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo>⁢</mo><msup><mi mathvariant="normal">ℓ</mi><mn>2</mn></msup><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mrow><mo rspace="0em">∂</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac></mstyle></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(10)</span></td>
+</tr></tbody>
+<tbody id="A1.E11"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="A1.E11.m1" class="ltx_Math" alttext="\displaystyle P(x,t\pm\tau)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mrow><mi>t</mi><mo>±</mo><mi>τ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="A1.E11.m2" class="ltx_Math" alttext="\displaystyle=P(x,t)\pm\tau\frac{\partial P(x,t)}{\partial t}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>±</mo><mrow><mi>τ</mi><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mo rspace="0em">∂</mo><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mrow><mo rspace="0em">∂</mo><mi>t</mi></mrow></mfrac></mstyle></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(11)</span></td>
+</tr></tbody>
+</table>
+</div>
+<div id="A1.p3" class="ltx_para ltx_noindent">
+<p class="ltx_p">En utilisant les définitions <a href="#A1.E10" title="In Appendix A Éléments théoriques - Mouvement Brownien ‣ UE UM4MEP10 : pratique expérimentale et numérique" class="ltx_ref"><span class="ltx_text ltx_ref_tag">10</span></a> et  <a href="#A1.E11" title="In Appendix A Éléments théoriques - Mouvement Brownien ‣ UE UM4MEP10 : pratique expérimentale et numérique" class="ltx_ref"><span class="ltx_text ltx_ref_tag">11</span></a> dans l’équation <a href="#A1.E8" title="In Appendix A Éléments théoriques - Mouvement Brownien ‣ UE UM4MEP10 : pratique expérimentale et numérique" class="ltx_ref"><span class="ltx_text ltx_ref_tag">8</span></a> on obtient</p>
+<table id="A1.EGx2" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="A1.E12"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="A1.E12.m1" class="ltx_Math" alttext="\displaystyle P(x,t+\tau)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mrow><mi>t</mi><mo>+</mo><mi>τ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="A1.E12.m2" class="ltx_Math" alttext="\displaystyle=\frac{1}{2}\left[P(x-\ell,t)+P(x+\ell,t)\right]" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo>⁢</mo><mrow><mo>[</mo><mrow><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>−</mo><mi mathvariant="normal">ℓ</mi></mrow><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>+</mo><mi mathvariant="normal">ℓ</mi></mrow><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>]</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(12)</span></td>
+</tr></tbody>
+<tbody id="A1.E13"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="A1.E13.m1" class="ltx_Math" alttext="\displaystyle P+\partial_{t}P" display="inline"><mrow><mi>P</mi><mo>+</mo><mrow><msub><mo lspace="0em" rspace="0em">∂</mo><mi>t</mi></msub><mi>P</mi></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="A1.E13.m2" class="ltx_Math" alttext="\displaystyle=\frac{1}{2}\left[P+\ell\partial_{x}P+\frac{1}{2}\ell^{2}\partial%
+_{x}^{2}P-\ell\partial_{x}P+\frac{1}{2}\ell^{2}\partial_{x}^{2}P\right]" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo>⁢</mo><mrow><mo>[</mo><mrow><mrow><mrow><mi>P</mi><mo>+</mo><mrow><mi mathvariant="normal">ℓ</mi><mo lspace="0em">⁢</mo><mrow><msub><mo rspace="0em">∂</mo><mi>x</mi></msub><mi>P</mi></mrow></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo>⁢</mo><msup><mi mathvariant="normal">ℓ</mi><mn>2</mn></msup><mo lspace="0em">⁢</mo><mrow><msubsup><mo rspace="0em">∂</mo><mi>x</mi><mn>2</mn></msubsup><mi>P</mi></mrow></mrow></mrow><mo>−</mo><mrow><mi mathvariant="normal">ℓ</mi><mo lspace="0em">⁢</mo><mrow><msub><mo rspace="0em">∂</mo><mi>x</mi></msub><mi>P</mi></mrow></mrow></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo>⁢</mo><msup><mi mathvariant="normal">ℓ</mi><mn>2</mn></msup><mo lspace="0em">⁢</mo><mrow><msubsup><mo rspace="0em">∂</mo><mi>x</mi><mn>2</mn></msubsup><mi>P</mi></mrow></mrow></mrow><mo>]</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(13)</span></td>
+</tr></tbody>
+<tbody id="A1.E14"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="A1.E14.m1" class="ltx_Math" alttext="\displaystyle=P+\frac{1}{2}\ell^{2}\partial_{x}^{2}P" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mi>P</mi><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo>⁢</mo><msup><mi mathvariant="normal">ℓ</mi><mn>2</mn></msup><mo lspace="0em">⁢</mo><mrow><msubsup><mo rspace="0em">∂</mo><mi>x</mi><mn>2</mn></msubsup><mi>P</mi></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(14)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">où <math id="A1.p3.m1" class="ltx_Math" alttext="P\equiv P(x,t)" display="inline"><mrow><mi>P</mi><mo>≡</mo><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. L’équation précédente se réécrit comme</p>
+<table id="A1.E15" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="A1.E15.m1" class="ltx_Math" alttext="\boxed{\frac{\partial P(x,t)}{\partial t}=\frac{\ell^{2}}{2\tau}\frac{\partial%
+^{2}P(x,t)}{\partial x^{2}}=D\frac{\partial^{2}P(x,t)}{\partial x^{2}}}" display="block"><menclose notation="box"><mrow><mfrac><mrow><mo rspace="0em">∂</mo><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mrow><mo rspace="0em">∂</mo><mi>t</mi></mrow></mfrac><mo>=</mo><mrow><mfrac><msup><mi mathvariant="normal">ℓ</mi><mn>2</mn></msup><mrow><mn>2</mn><mo>⁢</mo><mi>τ</mi></mrow></mfrac><mo>⁢</mo><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mrow><mo rspace="0em">∂</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac></mrow><mo>=</mo><mrow><mi>D</mi><mo>⁢</mo><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mrow><mo rspace="0em">∂</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac></mrow></mrow></menclose></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(15)</span></td>
+</tr></tbody>
+</table>
+</div>
+<div id="A1.p4" class="ltx_para ltx_noindent">
+<p class="ltx_p">On retrouve bien une équation de diffusion pour la probabilité, et donc pour la concentratio de particules.</p>
+</div>
+<figure id="A1.F5" class="ltx_figure">
+<div class="ltx_flex_figure">
+<div class="ltx_flex_cell ltx_flex_size_2"><img src="assets/marcheurs_traj.png" id="A1.F5.g1" class="ltx_graphics ltx_centering ltx_figure_panel ltx_img_landscape" width="293" height="221" alt="Refer to caption"></div>
+<div class="ltx_flex_cell ltx_flex_size_2"><img src="assets/marcheurs_distrib.png" id="A1.F5.g2" class="ltx_graphics ltx_centering ltx_figure_panel ltx_img_landscape" width="293" height="224" alt="Refer to caption"></div>
+</div>
+<figcaption class="ltx_caption ltx_centering"><span class="ltx_tag ltx_tag_figure">Figure 5: </span>Les trajectoires des marcheurs sont représentées en semi-transparence pour mieux visualiser les chevauchements. On observe que la distribution des positions suit une loi gaussienne. De plus, on remarque que la variance de cette distribution augmente avec le temps, conformément aux prédictions théoriques.</figcaption>
+</figure>
+<div id="A1.p5" class="ltx_para ltx_noindent">
+<p class="ltx_p">En prenant pour condition initiale <math id="A1.p5.m1" class="ltx_Math" alttext="P(x,0)=\delta(x)" display="inline"><mrow><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>δ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, on peut montrer que la la solution de l’équation de diffusion est une Gaussienne</p>
+<table id="A1.E16" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="A1.E16.m1" class="ltx_Math" alttext="P(x,t)=\frac{1}{\sqrt{4\pi Dt}}e^{-\frac{x^{2}}{4Dt}}" display="block"><mrow><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mfrac><mn>1</mn><msqrt><mrow><mn>4</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>D</mi><mo>⁢</mo><mi>t</mi></mrow></msqrt></mfrac><mo>⁢</mo><msup><mi>e</mi><mrow><mo>−</mo><mfrac><msup><mi>x</mi><mn>2</mn></msup><mrow><mn>4</mn><mo>⁢</mo><mi>D</mi><mo>⁢</mo><mi>t</mi></mrow></mfrac></mrow></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(16)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">avec une variance qui croit linéairement dans le temps</p>
+<table id="A1.E17" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="A1.E17.m1" class="ltx_Math" alttext="\left\langle x^{2}(t)\right\rangle=2Dt." display="block"><mrow><mrow><mrow><mo>⟨</mo><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⟩</mo></mrow><mo>=</mo><mrow><mn>2</mn><mo>⁢</mo><mi>D</mi><mo>⁢</mo><mi>t</mi></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(17)</span></td>
+</tr></tbody>
+</table>
+</div>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Mon Feb 16 16:38:03 2026 by <a href="http://dlmf.nist.gov/LaTeXML/" class="ltx_LaTeXML_logo"><span style="letter-spacing:-0.2em; margin-right:0.1em;">L<span class="ltx_font_smallcaps" style="position:relative; bottom:2.2pt;">a</span>T<span class="ltx_font_smallcaps" style="font-size:120%;position:relative; bottom:-0.2ex;">e</span></span><span style="font-size:90%; position:relative; bottom:-0.2ex;">XML</span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="Mascot Sammy"></a>
+</div></footer>
+</div>
+	</div>
+</body>
+</html>
