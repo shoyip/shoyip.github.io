@@ -17,6 +17,20 @@ body {
 	padding-top: .5rem;
 }
 
+nav {
+	padding-top: .5rem;
+	padding-bottom: .5rem;
+}
+
+nav a {
+	padding-right: 1rem;
+	color: blue;
+}
+
+nav a:visited {
+	color: blue;
+}
+
 p, ul {
 	padding-top: .3rem;
 }
