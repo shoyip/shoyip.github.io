@@ -13,8 +13,12 @@ body {
 	padding-top: 1rem;
 }
 
-p, ul {
+.subsection {
 	padding-top: .5rem;
+}
+
+p, ul {
+	padding-top: .3rem;
 }
 
 .resref {
